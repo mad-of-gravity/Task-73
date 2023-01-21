@@ -14,8 +14,6 @@ function App() {
         <div className="notification">
           Edit the <code>./src</code> folder to add components.
         </div>
-
-        <CustomButton />
       </div>
 
       <CustomButton />
