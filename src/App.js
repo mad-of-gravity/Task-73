@@ -1,24 +1,18 @@
 import "./App.css";
-import CustomButton from "./CustomButton";
+import { useState, useEffect } from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <section className="hero">
-        <div className="hero-body">
-          <p className="title">A React Task</p>
-          <p className="subtitle">by Boom.dev</p>
-        </div>
-      </section>
-      <div className="container is-fullhd">
-        <div className="notification">
-          Edit the <code>./src</code> folder to add components.
-        </div>
-      </div>
+  const [counter, setCounter] = useState(1);
 
-      <CustomButton />
-    </div>
-  );
+    useEffect(() => {
+        document.title = `Count (${counter})`;
+    }, [counter]);
+
+    return (
+        <button onClick={() => setCounter(counter + 1)}>
+            Count ({counter})
+        </button>
+    );
 }
 
 export default App;
