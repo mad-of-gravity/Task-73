@@ -1,4 +1,5 @@
 import "./App.css";
+import CustomButton from "./CustomButton";
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
           Edit the <code>./src</code> folder to add components.
         </div>
       </div>
+
+      <CustomButton />
     </div>
   );
 }
