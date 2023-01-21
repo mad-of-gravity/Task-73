@@ -1,8 +1,16 @@
-
+import { useState, useEffect } from "react";
 
 function CustomButton() {
+    const [counter, setCounter] = useState(1);
+
+    useEffect(() => {
+        document.title = `Count (${counter})`;
+    }, [counter]);
+
     return (
-        <input type="button" value="My custtom Button" />
+        <button onClick={() => setCounter(counter + 1)}>
+            Count ({counter})
+        </button>
     );
 }
 
